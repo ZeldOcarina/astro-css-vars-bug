@@ -1,0 +1,21 @@
+---
+import GlobalStyles from "../components/GlobalStyles.astro";
+import "../styles/styles.css"
+
+const colorPrimaryInTheLayout = "gold"
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<GlobalStyles squareColor="red" fragmentSquareColor="green" />
+		<style define:vars={{ colorPrimaryInTheLayout }} is:global>
+			:root {
+				--color-primary-in-the-layout: var(--colorPrimaryInTheLayout);
+			}
+		</style>
+		<title>Astro styles bug</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

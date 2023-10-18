@@ -1,0 +1,4 @@
+body {
+  background: var(--fragment-square-color); /* Works */
+  border: 10px solid var(--square-color); /* Does not work */
+}

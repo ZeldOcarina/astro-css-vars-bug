@@ -1,0 +1,14 @@
+<style>
+    .square {
+        background: var(--color-primary-in-the-layout); /* Works */
+        width: 100px;
+        height: 100px;
+        border: 10px solid var(--square-color); /* Does not work */
+    }
+    .square p {
+        color: var(--fragment-square-color); /* Works */
+    }
+</style>
+<div class="square">
+    <p>I am a p</p>
+</div>

@@ -1,0 +1,16 @@
+---
+const { squareColor, fragmentSquareColor } = Astro.props
+---
+
+<style is:global define:vars={{ squareColor }}>
+    :root {
+        --square-color: var(--squareColor);
+    }
+</style>
+<Fragment set:html={`
+    <style>
+        :root {
+            --fragment-square-color: ${fragmentSquareColor}
+        }    
+    </style>
+`} />
